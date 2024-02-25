@@ -10,7 +10,8 @@ public class Exercicio1 {
         while(senha != 2002){
             System.out.println("Senha Invalida");
             senha = scan.nextInt(); 
-        } 
+        }
+        scan.close(); 
 
         System.out.println("Acesso Permitido");
 

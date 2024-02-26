@@ -34,5 +34,6 @@ public class ExemploString {
         System.out.println("replace('ABC', 'XYZ'): -" + replaceComString + "-");
         System.out.println("Index of 'bc': " + index);
         System.out.println("Last index of 'bc': " + last);
+        System.out.println("Split primeira String: " + original1);
     }
 }

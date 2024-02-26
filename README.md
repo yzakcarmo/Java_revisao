@@ -7,3 +7,6 @@
 ### Modulo 5 - Condicional (if, else, switch-case, ternária)
 
 ### Modulo 6 - Repetição (for,while, do-while)
+
+### Modulo 7 - Bitwise e funções do String
+

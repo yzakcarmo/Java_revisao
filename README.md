@@ -13,3 +13,5 @@
 ### Modulo 8 - Inicio POO
 
 ### Modulo 9 - Construtores, palavra this, sobrecarga, encapsulamento
+
+### Modulo 10 - Comportamento de memória, arrays, listas

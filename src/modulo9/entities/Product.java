@@ -17,10 +17,10 @@ public class Product {
     }    
 
     public String toString() {
-        return 
+        return "\n" + 
             "Produto: " + name + "\n" +
             "Preço: " + String.format("%.2f", price) + "\n" +
-            "Quantidade: " + quantity;
+            "Quantidade: " + quantity + "\n";
 
 
     }

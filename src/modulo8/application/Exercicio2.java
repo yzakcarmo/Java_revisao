@@ -15,10 +15,10 @@ public class Exercicio2 {
 
         System.out.printf("Empregado: %s, $ %.2f \n",empregado.getName(), empregado.netSalary());
 
-        System.out.print("Qual % de aumento: ");
+        System.out.print("\nQual % de aumento: ");
         empregado.increaseSalary(scan.nextDouble());
         scan.close();
 
-        System.out.printf("Atualizado: %s, $ %.2f",empregado.getName(), empregado.netSalary());
+        System.out.printf("\nAtualizado: %s, $ %.2f",empregado.getName(), empregado.netSalary());
     }
 }

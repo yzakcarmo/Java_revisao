@@ -9,12 +9,13 @@ import modulo10.entities.Person;
 public class Exercicio3 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        System.out.print("Quantidade: ");
-        int quant = scan.nextInt();
         String nome;
         int age;
         double height;
-        Person[] pessoas = new Person[quant];
+
+        System.out.print("Quantidade: ");
+        int quant = scan.nextInt();
+        Person[] pessoas = new Person[quant];        
 
         for(int i = 0; i < pessoas.length; i++ ) {
             nome = scan.nextLine();
@@ -29,8 +30,14 @@ public class Exercicio3 {
             System.out.print("\n");
 
             pessoas[i] = new Person(nome, age, height);
-        }
+        }        
         scan.close();
+
+        /*
+        Person[] pessoas = new Person[2];
+        pessoas[0] = new Person("a", 16, 1.8);
+        pessoas[1] = new Person("b", 1, 1.6);              
+        */
 
         System.out.printf("Media Alturas: %.2f", averageHeight(pessoas));
         under16(pessoas);
@@ -54,13 +61,10 @@ public class Exercicio3 {
                 nomes.add(obj.getName());
             }
         }
-
-        System.out.printf("Com menos de 16 anos: %.1f", (under/pessoas.length)*100);
-
-        System.out.println();
-
-        for( int i = 0; i < nomes.size(); i++) {
-            System.out.println(nomes.get(i));
+        System.out.printf("\n" + "Com menos de 16 anos: %.1f %%" + "\n", (under/pessoas.length)*100);
+       
+        for(String obj : nomes) {
+            System.out.println(obj);  
         }
     }
 }

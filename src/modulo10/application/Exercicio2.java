@@ -14,6 +14,7 @@ public class Exercicio2 {
             System.out.print("Numero: ");
             num[i] = scan.nextDouble();
         }
+        scan.close();
 
         System.out.print("Valores: ");
         for(double obj : num) {

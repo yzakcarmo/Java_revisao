@@ -16,7 +16,6 @@ public class ExemplosDataHoraFormatando {
         LocalDate d04 = LocalDate.parse("2022-06-11");
         LocalDateTime d05 = LocalDateTime.parse("2022-06-11T21:00");
         Instant d06 = Instant.parse("2022-06-11T21:00:00Z");
-
         System.out.println("Data em ISO 8601 convertida para dd/MM/yyyy = " + fmt1.format(d04));
         System.out.println("Data-hora em ISO 8601 convertida para dd/MM/yyyy HH:mm = " + fmt2.format(d05));
         System.out.println("Data-hora em ISO 8601 GMT convertida para dd/MM/yyyy HH:mm no fuso da maquina = " + fmt3.format(d06));

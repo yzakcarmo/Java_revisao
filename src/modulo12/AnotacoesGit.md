@@ -28,6 +28,7 @@ git add .
 git commit -m "Mensagem explicativa"
 git push
 ```
+**git clone** = Traz o repositorio remoto para a maquina
 
 ## Atualizando repositorio atual com alterações do remoto
 ```
@@ -35,8 +36,6 @@ git pull <nome do remote> <nome da branch>
 ```
 
 Exemplo: `git pull origin main`
-
-**git clone** = Traz o repositorio remoto para a maquina
 
 ## Traz o status dos arquivos no commit
 ```

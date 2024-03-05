@@ -1,4 +1,4 @@
-# Comandos Git Básicos
+# *Básicos*
 ## Inicializando repositorio
 ```
 git init
@@ -30,12 +30,18 @@ git push
 ```
 **git clone** = Traz o repositorio remoto para a maquina
 
-## Atualizando repositorio atual com alterações do remoto
+## Atualizar repositorio atual com alterações do remoto
 ```
 git pull <nome do remote> <nome da branch>
 ```
 
 Exemplo: `git pull origin main`
+
+# *Médios*
+## Verificar a remote
+```
+git remote -v
+```
 
 ## Traz o status dos arquivos no commit
 ```
@@ -62,7 +68,8 @@ git checkout <cod.commit\branch>
 ```
 Também é possivel ir para commits anteriores usando `HEAD~quantidade`, exemplo : HEAD~1 pra ir no penultimo commit.
 
-## Desfazer modificação que não salvou(teve pull) 
+# *Avançados*
+## Desfazer modificação que não salvaram (staged sem commitar) 
 ```
 git status
 git reset
@@ -112,4 +119,4 @@ git reset --hard HEAD~1
 `Atenção!!!!!!
 Só faz isso se tiver certeza da decisão`
 
-### Se mudou de ideia antes de fazer push/sync e as alterções estavam salvas no origin. Usa o pull para desfazer
+### Se mudou de ideia e as alterções ainda estiverem salvas no origin. Usa o `git pull` para desfazer

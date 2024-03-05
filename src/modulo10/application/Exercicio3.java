@@ -61,7 +61,7 @@ public class Exercicio3 {
                 nomes.add(obj.getName());
             }
         }
-        System.out.printf("\n" + "Com menos de 16 anos: %.1f %%" + "\n", (under/pessoas.length)*100);
+        System.out.printf("\n" + "Com menos de 18 anos: %.1f %%" + "\n", (under/pessoas.length)*100);
        
         for(String obj : nomes) {
             System.out.println(obj);  

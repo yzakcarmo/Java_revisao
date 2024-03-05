@@ -56,7 +56,7 @@ public class Exercicio3 {
         List <String> nomes = new ArrayList<>();
 
         for(Person obj : pessoas) {
-            if(obj.getAge() < 16) {
+            if(obj.getAge() < 17) {
                 under++;
                 nomes.add(obj.getName());
             }

@@ -17,3 +17,7 @@ Modulo 9 - Construtores, palavra this, sobrecarga, encapsulamento
 Modulo 10 - Comportamento de memória, arrays, listas
 
 Modulo 11 - Trabalhando com data-hora
+
+Modulo 12 - Nivelamento GIT e Github
+
+Modulo 13 - Enumerações e Composição

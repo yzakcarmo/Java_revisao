@@ -17,18 +17,18 @@ git push -u origin main
 
 **git branch -M main**  = Garante que a branch usada vai ser main
 
-**git remote add origin** = Vincula ao repositorio do Github
+**git remote add origin <repositorio>** = Vincula ao repositorio do Github
 
-**git push -u origin main** = Sobe as mudanças direcionando para a branch main
+**git push -u origin main** = Sobe as mudanças registrando o repositorio
 
 ## Clonando repositorio
 ```
-git clone git@github.com:seuusuario/seurepositorio.git
+git clone <repositorio>
 git add .
 git commit -m "Mensagem explicativa"
 git push
 ```
-**git clone** = Traz o repositorio remoto para a maquina
+**git clone <repostorio>** = Traz o repositorio remoto para a maquina
 
 ## Atualizar repositorio atual com alterações do remoto
 ```
@@ -69,7 +69,14 @@ git checkout <cod.commit\branch>
 Também é possivel ir para commits anteriores usando `HEAD~quantidade`, exemplo : HEAD~1 pra ir no penultimo commit.
 
 # *Avançados*
-## Desfazer modificação que não salvaram (staged sem commitar) 
+## Apontar projeto para outro repositorio remoto (Copiar local e os historicos para outro remoto)
+```
+git remote -v
+git remote set-url origin <repositorio>
+git push -u origin main
+```
+
+## Desfazer modificações que não salvaram (staged sem commitar) 
 ```
 git status
 git reset
@@ -79,6 +86,8 @@ git checkout -- .
 **git reset** = Tira as mudanças do staged 
 
 **git clean -df** = Remove arquivos Untracked
+
+**git checkout -- .** = Apaga/desfaz as alterações Modified
 
 ## O editor VIM abriu do nada
 ![editorVIM](editorVIM.jpg)
@@ -119,4 +128,4 @@ git reset --hard HEAD~1
 `Atenção!!!!!!
 Só faz isso se tiver certeza da decisão`
 
-### Se mudou de ideia e as alterções ainda estiverem salvas no origin. Usa o `git pull` para desfazer
+### Se mudou de ideia e as alterações ainda estiverem salvas no origin. Usa o `git pull` para desfazer

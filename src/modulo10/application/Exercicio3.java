@@ -40,7 +40,7 @@ public class Exercicio3 {
         */
 
         System.out.printf("Media Alturas: %.2f", averageHeight(pessoas));
-        under16(pessoas);
+        underAge(pessoas);
     }
 
     public static double averageHeight(Person[] pessoas) {
@@ -51,12 +51,12 @@ public class Exercicio3 {
         return average/pessoas.length;
     }
 
-    public static void under16 (Person[] pessoas) {
+    public static void underAge (Person[] pessoas) {
         double under = 0;
         List <String> nomes = new ArrayList<>();
 
         for(Person obj : pessoas) {
-            if(obj.getAge() < 16) {
+            if(obj.getAge() < 18) {
                 under++;
                 nomes.add(obj.getName());
             }

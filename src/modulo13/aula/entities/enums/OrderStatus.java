@@ -1,4 +1,4 @@
-package modulo13.entities.enums;
+package modulo13.aula.entities.enums;
 
 public enum OrderStatus {
     Aguardando_Pagamento,

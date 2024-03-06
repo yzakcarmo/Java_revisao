@@ -1,9 +1,9 @@
-package modulo13.entities;
+package modulo13.aula.entities;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-import modulo13.entities.enums.OrderStatus;
+import modulo13.aula.entities.enums.OrderStatus;
 
 public class Order {
     DateTimeFormatter fmt1 = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");

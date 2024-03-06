@@ -20,4 +20,4 @@ Modulo 11 - Trabalhando com data-hora
 
 Modulo 12 - Nivelamento GIT e Github
 
-Modulo 13 - Enumerações e Composição
+Modulo 13 - Enumerações(Enum) e Composição(Composition)

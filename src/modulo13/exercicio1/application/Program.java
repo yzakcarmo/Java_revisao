@@ -57,10 +57,10 @@ public class Program {
         System.out.print("\n" + "Mês e Ano para calculo (MM/YYYY): ");
         String search = scan.next();
         scan.close();
-
         Integer mes = Integer.parseInt(search.substring(0, 2));
         Integer ano = Integer.parseInt(search.substring(3));        
 
+        //Apresentando os dados
         System.out.println("Nome: " + func.getName());
         System.out.println("Departamento: " + func.getDepartament().getName());
         System.out.println("Total por " + search + ": " + String.format("%.2f", func.income(mes,ano)));

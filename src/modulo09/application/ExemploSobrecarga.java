@@ -14,9 +14,8 @@ public class ExemploSobrecarga {
         double price = scan.nextDouble();        
         Product produtoSimples = new Product(name, price);
 
-        name = scan.nextLine();        
         System.out.print("\n"+"Nome: ");
-        name = scan.nextLine();
+        name = scan.next();
         System.out.print("Preço: ");
         price = scan.nextDouble();
         System.out.print("Quantidade: ");

@@ -67,12 +67,12 @@ public class Worker {
         contracts.remove(contract);
     }
 
-    public Double income(Integer year, Integer month) {
+    public Double income(Integer month, Integer year) {
         double total = baseSalary;
 
         for(HourContract obj : contracts) {
-            int objMonth = obj.getDate().getMonth().getValue();
-            int objYear = ((int)obj.getDate().getYear());
+            int objMonth = obj.getDate().getMonthValue();
+            int objYear = obj.getDate().getYear();
             if(objMonth == month && objYear == year) {
                 total += obj.totalValue();
             }

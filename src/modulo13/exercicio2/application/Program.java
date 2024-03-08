@@ -26,8 +26,8 @@ public class Program {
             "Good night", 
             "See you tomorrow", 
             10);
-        p1.addComment(c3);
-        p1.addComment(c4);
+        p2.addComment(c3);
+        p2.addComment(c4);
 
         System.out.println(p2);
     }

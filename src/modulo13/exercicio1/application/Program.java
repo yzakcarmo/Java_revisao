@@ -17,10 +17,8 @@ public class Program {
 
         /*//Dados Mockados
         Worker func = new Worker("Teste", WorkerLevel.valueOf("JUNIOR"), 1200.0, new Departament("Design"));
-        HourContract contrato1 = new HourContract(LocalDate.parse("20/08/2020", fmt1), 5.0, 2);
-        HourContract contrato2 = new HourContract(LocalDate.parse("20/08/2021", fmt1), 5.0, 2);
-        func.addContract(contrato1);
-        func.addContract(contrato2);
+        func.addContract(new HourContract(LocalDate.parse("20/08/2020", fmt1), 5.0, 2));
+        func.addContract(new HourContract(LocalDate.parse("20/08/2021", fmt1), 5.0, 2));
         String search = "08/2020";*/
         
         //Criando funcionario
@@ -48,9 +46,7 @@ public class Program {
             System.out.print("Duração (horas): ");
             Integer hours = scan.nextInt();
 
-            HourContract contrato = new HourContract(data, price, hours);
-
-            func.addContract(contrato);
+            func.addContract(new HourContract(data, price, hours));
         }
         
         //Gerando o calculo

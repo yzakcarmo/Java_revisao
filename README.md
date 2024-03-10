@@ -23,3 +23,5 @@ Modulo 12 - Nivelamento GIT e Github
 Modulo 13 - Enumerações(Enum) e Composição(Composition)
 
 Modulo 14 - Herança e Polimorfismo
+
+Modulo 15 - Exceções

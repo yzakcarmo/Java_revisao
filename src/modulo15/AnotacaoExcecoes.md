@@ -23,4 +23,15 @@ catch (ArrayIndexOutOfBoundsException e) {
     e.printStackTrace();
 }
 ```
-`e.printStackTrace()` = Mostra a pilha de chamadas de métodos
+`e.printStackTrace()` = Mostra a pilha de chamadas de métodos, permitindo entender o que está acontecendo no erro, sem parar a aplicação.
+
+# Finally
+```
+try {
+}
+catch (ExceptionType e) {
+}
+finally{
+}
+```
+`finally{}` = Código a ser executado tendo ou não exceção.

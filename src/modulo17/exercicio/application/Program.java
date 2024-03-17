@@ -10,40 +10,41 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import modulo17.exercicio.model.entities.Product;
+
 public class Program {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        List<String> values = new ArrayList<>();
+        List<Product> list = new ArrayList<>();
+        //System.out.print("Digite o caminho do arquivo de origem: ");
         //String source = sc.nextLine();
         sc.close();
         String source = "src\\modulo17\\file\\exemplo.csv";
+        String path = new File(source).getParent();
+        new File(path + "\\out").mkdir();
+        String target = path + "\\out\\sumarry.csv";
 
         try(BufferedReader br = new BufferedReader(new FileReader(source))) {
-            new File(source + "\\out").mkdir();           
+                      
             String line = br.readLine();           
             while (line != null) {
-                StringBuilder text = new StringBuilder();
                 String[] lines = line.split(",");
-
-                Double summary = Double.valueOf(lines[1]) * Integer.valueOf(lines[2]);                
-                text.append(lines[0] + ",");
-
-                values.add(text.toString());
+                list.add(new Product(lines[0], Double.valueOf(lines[1]), Integer.valueOf(lines[2])));                
                 line = br.readLine();
-            }            
-        }
-        catch(IOException e) {
-            e.printStackTrace();
-        }
-        
-        try(BufferedWriter bw = new BufferedWriter(new FileWriter(source + "\\out\\sumarry.csv"))) {
-            for(String value : values) {
-                bw.write(value);
-                bw.newLine();
+            }
+
+           try(BufferedWriter bw = new BufferedWriter(new FileWriter(target))) {
+                for(Product product : list) {
+                    bw.write(product.getName() + "," + String.format("$.2f", product.total()));
+                    bw.newLine();
+                }
+            }
+            catch(IOException e) {
+                System.out.println("Erro de escrita: " + e.getMessage());
             }
         }
         catch(IOException e) {
-            e.printStackTrace();
+            System.out.println("Erro de leitura: " + e.getMessage());
         }
     }    
 }

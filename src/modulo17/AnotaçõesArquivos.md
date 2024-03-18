@@ -1,5 +1,5 @@
 # Try-with-resources
-## É um bloco try que declara um ou mais recursos, e garante que eles serão fechados ao final do bloco 
+É um bloco try que declara um ou mais recursos, e garante que eles serão fechados ao final do bloco 
 ```
 try (BufferedReader br = new BufferedReader(new FileReader(path))) {
     String line = br.readLine();
@@ -19,15 +19,32 @@ FileReader = Faz a leitura de caracteres do arquivo.
 
 BufferedReader = Faz mais rapido.
 
+`String line = br.readLine()` = Lê a linha do arquivo e atribui na variavel `line`
+
 # FileWriter e BufferedWriter
+```
+try(BufferedWriter bw = new BufferedWriter(new FileWriter(target))) {
+    for(Product product : list) {
+        bw.write(product.getName() + "," + String.format("%.2f", product.total()));
+        bw.newLine();
+    }
+}
+catch(IOException e) {
+    System.out.println("Erro de escrita: " + e.getMessage());
+}
+```
 
 FileWriter = Faz a escrita de caracteres no arquivo.
+
+BufferedWriter = Faz mais rapido.
 
 `new FileWriter(path)` = Cria/recria o arquivo
 
 `new FileWriter(path,true)` = Acrescenta ao arquivo existente
 
-BufferedWriter = Faz mais rapido.
+`bw.write()` = Escreve o que for passado
+
+`bw.newLine()` = Inicia uma nova linha no arquivo
 
 # File para manipulação de pastas e listagem de arquivos
 
@@ -50,10 +67,12 @@ boolean success = new File(strPath + "\\subdir").mkdir();
 System.out.println("Directory created successfully: " + success);
 ```
 
-`File path = new File("c:\\temp");` = Cria um objeto _File_ para o caminho inicial que será usado.
+`File path = new File("c:\\temp")` = Cria um objeto _File_ para o caminho inicial que será usado.
 
-`path.listFiles()` = Retorna uma lista de objetos de acordo com o parametro passado.
+`path.getParent()` = Retorna em String o caminho acima do caminho definido.
 
-`File[] folders = path.listFiles(File::isDirectory);` = Cria uma lista de objetos com a referencia das pastas no caminho origem 
+`File[] folders = path.listFiles(File::isDirectory)` = Cria uma lista de objetos com a referencia das pastas no caminho definido 
 
-`File[] files = path.listFiles(File::isFile);` = Cria uma lista de objetos com a referencia dos arquivos no caminho origem 
+`File[] files = path.listFiles(File::isFile)` = Cria uma lista de objetos com a referencia dos arquivos no caminho definido. 
+
+`new File(path + "\\subdir").mkdir()` = Cria uma nova pasta no caminho definido.

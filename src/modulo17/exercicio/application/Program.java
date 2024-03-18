@@ -16,10 +16,10 @@ public class Program {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         List<Product> list = new ArrayList<>();
-        //System.out.print("Digite o caminho do arquivo de origem: ");
-        //String source = sc.nextLine();
+        System.out.print("Digite o caminho do arquivo de origem: ");
+        String source = sc.nextLine();
         sc.close();
-        String source = "src\\modulo17\\file\\exemplo.csv";
+        //String source = "src\\modulo17\\file\\exemplo.csv";
         String path = new File(source).getParent();
         new File(path + "\\out").mkdir();
         String target = path + "\\out\\sumarry.csv";
@@ -35,7 +35,7 @@ public class Program {
 
            try(BufferedWriter bw = new BufferedWriter(new FileWriter(target))) {
                 for(Product product : list) {
-                    bw.write(product.getName() + "," + String.format("$.2f", product.total()));
+                    bw.write(product.getName() + "," + String.format("%.2f", product.total()));
                     bw.newLine();
                 }
             }

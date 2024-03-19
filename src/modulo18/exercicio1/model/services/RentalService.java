@@ -1,9 +1,21 @@
 package modulo18.exercicio1.model.services;
 
+import java.time.Duration;
+
+import modulo18.exercicio1.model.entities.CarRental;
+import modulo18.exercicio1.model.entities.Invoice;
+
 public class RentalService {
     private Double priceHour;
     private Double priceDay;
-    //private BrazilTaxService tax;
+
+    private TaxService taxService;
+
+    public RentalService(Double priceHour, Double priceDay, TaxService taxService) {
+        this.priceHour = priceHour;
+        this.priceDay = priceDay;
+        this.taxService = taxService;
+    }
 
     public Double getPriceHour() {
         return priceHour;
@@ -21,17 +33,16 @@ public class RentalService {
         this.priceDay = priceDay;
     }
 
-    /*public void processInvoice(CarRental rental) {
-
-    }
-
-    public double total() {
-        Duration duration = Duration.between(start, finish);
-        Double subtotal;
+    public void processInvoice(CarRental rental) {
+        Double minutes  = (double) Duration.between(rental.getStart(), rental.getFinish()).toMinutes();
+        Double hours = minutes / 60.0;
+        Double basicPayment;
         
-        if(duration.toHours() > 12) {
-            subtotal = (duration.toHours() % 24 == 0) ? duration.toDays() * priceDay : (duration.toDays() + 1) * priceDay;
+        if(hours > 12) {
+            basicPayment = priceDay * Math.ceil(hours / 24);
         }
-        else subtotal = (duration.toMinutes() % 60 == 0) ? duration.toHours() * priceHour : (duration.toHours() + 1) * priceHour;               
-    }*/
+        else basicPayment = priceHour * Math.ceil(hours);
+
+        rental.setInvoice(new Invoice(taxService.tax(basicPayment), basicPayment));
+    }
 }

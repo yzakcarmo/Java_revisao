@@ -4,6 +4,13 @@ public class Invoice {
     private Double tax;
     private Double basicPayment;
 
+    public Invoice() {}
+
+    public Invoice(Double tax, Double basicPayment) {
+        this.tax = tax;
+        this.basicPayment = basicPayment;
+    }
+
     public Double getTax() {
         return tax;
     }
@@ -20,7 +27,7 @@ public class Invoice {
         this.basicPayment = basicPayment;
     }
 
-    public Double GetTotalPayment() {
+    public Double getTotalPayment() {
         return getBasicPayment() + getTax();
     }
 
@@ -36,7 +43,7 @@ public class Invoice {
         out.append(String.format("%.2f", getTax()));
         out.append("\n");
         out.append("Total: ");
-        out.append(String.format("%.2f", GetTotalPayment()));
+        out.append(String.format("%.2f", getTotalPayment()));
 
         return out.toString();
     }

@@ -2,34 +2,35 @@ package modulo18.exercicio1.model.entities;
 
 import java.time.LocalDateTime;
 
-public class CarRental {    
-    private Vehicle vehicle;
+public class CarRental {
+
     private LocalDateTime start;
     private LocalDateTime finish;
+
+    private Vehicle vehicle;
     private Invoice invoice;
 
-    public CarRental(Vehicle vehicle, LocalDateTime start, LocalDateTime finish, Invoice invoice) {
+    public CarRental(Vehicle vehicle, LocalDateTime start, LocalDateTime finish) {
         this.vehicle = vehicle;
         this.start = start;
         this.finish = finish;
-        this.invoice = invoice;
     }
 
     public CarRental() {}    
 
-    public LocalDateTime getstart() {
+    public LocalDateTime getStart() {
         return start;
     }
 
-    public void setstart(LocalDateTime start) {
+    public void setStart(LocalDateTime start) {
         this.start = start;
     }
 
-    public LocalDateTime getfinish() {
+    public LocalDateTime getFinish() {
         return finish;
     }
 
-    public void setfinish(LocalDateTime finish) {
+    public void setFinish(LocalDateTime finish) {
         this.finish = finish;
     }
 

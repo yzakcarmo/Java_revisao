@@ -11,6 +11,14 @@ public class Employee implements Comparable<Employee> {
 }
 ```
 # Default Methods
-A partir do Java8 é possivel definar metodos 
+A partir do Java8 é possivel definar metodos concretos em interfaces
 ```
+public interface InterestService {
+    double getInterestRate();
+    default double payment(double amount, int months) {
+        if(months < 1 ) throw new InvalidParameterException("Mês tem que ser maior que zero");
+
+        return amount * Math.pow(1.0 + getInterestRate() / 100.00, months);
+    }
+}
 ```

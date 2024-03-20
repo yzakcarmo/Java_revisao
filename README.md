@@ -29,3 +29,5 @@ Modulo 15 - Exceções
 Modulo 17 - Trabalhando com arquivos
 
 Modulo 18 - Interfaces
+
+Modulo 19 - Generics, Set, Map

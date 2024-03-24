@@ -124,3 +124,5 @@ Tablet
 * `x.addAll(y)`= faz a união dos elementos entre o conjunto `x` e `y`;
 * `x.retainAll(y)`= faz a intersecção dos elementos entre o conjunto `x` e `y`;
 * `x.removeAll(y)`= faz a diferença dos elementos entre o conjunto `x` e `y`;
+
+# Map

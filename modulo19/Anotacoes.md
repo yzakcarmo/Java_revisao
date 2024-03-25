@@ -118,11 +118,23 @@ Tablet
 * `contains(x)` = retorna se o elemento faz parte do conjunto
 * `add(x)` = adiciona elemento;
 * `remove(x)` = remove elemento;
-* `removeIf()` = remove elementos que cumprem determinado predicado;
-
-    Exemplo: `removeIf(x -> x.length() >3)` = vai remover todos os elementos que o tamanho seja maior que 3
+* `removeIf()` = remove elementos que cumprem determinado predicado; 
+  * Exemplo: `removeIf(x -> x.length() >3)` = vai remover todos os elementos que o tamanho seja maior que 3
 * `x.addAll(y)`= faz a união dos elementos entre o conjunto `x` e `y`;
 * `x.retainAll(y)`= faz a intersecção dos elementos entre o conjunto `x` e `y`;
 * `x.removeAll(y)`= faz a diferença dos elementos entre o conjunto `x` e `y`;
 
-# Map
+# Map<K,V>
+É uma coleção de pares chave(Key)/valor(Value)
+
+As implementações são semelhantes ao Set: `HashMap`, `TreeMap` e `LinkedHashMap`.
+
+## Metodos
+* `put(k,v)`= adiciona o par;
+* `remove(k)`= remove o par que tem a chave correspondente;
+  * Por não permitir repetição de chave, o put mais recente sobreescreve o valor da chave.
+* `containsKey(k)`= checa se há um par com essa chave;
+* `get(k)`= retorna o valor que faz par com a chave passada;
+  * Caso a chave não exista retornará `null`.
+* `keySet()`= retorna um Set<K>
+* `values()`= retorna uma Collection<V>

@@ -5,7 +5,7 @@ public class Exercicio5 {
         Scanner scan = new Scanner(System.in);
         int cod = scan.nextInt();
         int quant = scan.nextInt();
-        double total = 0;
+        double total;
 
         scan.close();
         switch (cod) {

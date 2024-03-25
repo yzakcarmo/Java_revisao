@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import modulo17.exercicio.src.model.entities.Product;
+import model.entities.Product;
 
 public class Program {
     public static void main(String[] args) {

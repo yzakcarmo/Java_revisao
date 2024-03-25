@@ -1,4 +1,4 @@
-package modulo19.exemploGenericsDelimitado.src.model.entities;
+package model.entities;
 
 public class Product implements Comparable<Product> {
     private String name;

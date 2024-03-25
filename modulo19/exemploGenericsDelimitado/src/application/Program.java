@@ -1,4 +1,4 @@
-package modulo19.exemploGenericsDelimitado.src.application;
+package application;
 
 import modulo19.exemploGenericsDelimitado.src.model.entities.Product;
 import modulo19.exemploGenericsDelimitado.src.model.services.CalculationService;

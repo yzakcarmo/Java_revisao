@@ -1,4 +1,4 @@
-package modulo19.exemploGenericsDelimitado.src.model.services;
+package model.services;
 
 import java.util.List;
 

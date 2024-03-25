@@ -1,7 +1,7 @@
 package application;
 
-import modulo19.exemploGenericsDelimitado.src.model.entities.Product;
-import modulo19.exemploGenericsDelimitado.src.model.services.CalculationService;
+import model.entities.Product;
+import model.services.CalculationService;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

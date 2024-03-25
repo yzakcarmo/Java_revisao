@@ -1,4 +1,4 @@
-package modulo17.exercicio.src.model.entities;
+package model.entities;
 
 public class Product {
     private String name;

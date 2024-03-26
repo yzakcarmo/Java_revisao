@@ -31,3 +31,5 @@ Modulo 17 - Trabalhando com arquivos
 Modulo 18 - Interfaces
 
 Modulo 19 - Generics, Set, Map
+
+Modulo 20 - Programação Funcional e Expressões Lambda

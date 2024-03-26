@@ -3,7 +3,7 @@ import java.util.TreeSet;
 
 public class Rascunho {
     public static void main(String[] args) {
-        //Github na linha de comando https://cli.github.com/
+        //Github na linha de comando https://cli.github.com/manual
         Set<String> set = new TreeSet<>();
 
         set.add("TV");

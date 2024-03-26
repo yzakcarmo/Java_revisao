@@ -30,3 +30,10 @@ Exemplo em uma expressão lambda(função anonima):
 Comparator<Product> comp = (p1, p2) -> p1.getName().toUpperCase().compareTo(p2.getName().toUpperCase());
 ....
 ```
+
+# Method Reference
+
+```
+Product::staticProductPredicate
+```
+Faz referencia ao metodo estatico `staticProductPredicate` da classe `Product`

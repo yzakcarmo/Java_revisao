@@ -17,7 +17,7 @@ public class Select {
             conn = DB.getConnection();
 
             st = conn.createStatement();
-            rs = st.executeQuery("SELECT * FROM department");
+            rs = st.executeQuery("SELECT * FROM seller");
 
             while (rs.next()) {
                 System.out.println(rs.getInt("Id") + ", " + rs.getString("Name"));

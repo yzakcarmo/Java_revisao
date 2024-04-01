@@ -33,3 +33,7 @@ Modulo 18 - Interfaces
 Modulo 19 - Generics, Set, Map
 
 Modulo 20 - Programação Funcional e Expressões Lambda
+
+Modulo 21 - JDBC e manipulação de Banco de Dados
+
+Modulo 22 - Mapeamento objeto-relacional com JPA / Hibernate

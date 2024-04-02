@@ -71,6 +71,7 @@ public class User implements Serializable {
   private Long id;
   (........)
 
+  @JsonIgnore
   @OneToMany(mappedBy = "client")
   private List<Order> orders = new ArrayList<>();
 
@@ -81,6 +82,9 @@ public class User implements Serializable {
 @Table(name = "tb_order")
 public class Order implements Serializable {
   (........)
+
+  @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'", timezone = "GMT")
+  private Instant moment;
 
   @ManyToOne
   @JoinColumn(name = "client_id")
@@ -94,7 +98,11 @@ public class Order implements Serializable {
 
 `@GeneratedValue(strategy = GenerationType.IDENTITY)` = Sinaliza que a propriedade será autoincrementada no BD
 
+`@JsonIgnore` = Sinaliza para o Jackson que não deve apresentar esse atributo
+
 `@OneToMany(mappedBy = "client")` = Mapeia a relação `Um para Muitos` nesse atributo com outra classe/entidade e que o atributo do outro lado é o `client` 
+
+`@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'", timezone = "GMT")` = Sinaliza como deve ser formatado o JSON desse atributo
 
 `@JoinColumn(name = "client_id")` = Mapeia qual a coluna que será usada para a ligação das tabelas
 
@@ -115,6 +123,3 @@ public ResponseEntity<List<User>> findAll() {
 }
 ```
 `@GetMapping` = Sinaliza que  ao acessar o caminho raiz com o verbo GET executará o metodo. Também pode receber um `(value = "")` para especificar o caminho.
-
-```
-```

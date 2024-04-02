@@ -8,7 +8,7 @@ de aplicações web, para cada requisição ao sistema).
 ## EntityManagerFactory
 Um objeto utilizado para instanciar objetos EntityManager, geralmente se tem um só para toda a aplicação.
 
-# Mavaen InteliJ
+# Maven InteliJ
 Pra adicionar o Maven no projeto, só selecionar ele e usar `Ctrl + Shift + A` -> `Add Framework Support`
 
 # Metodos do EntityManager
@@ -59,4 +59,62 @@ em.getTransaction().commit();
 
 em.close();
 emf.close();
+```
+
+# Anotations Jakarta
+```
+@Entity
+@Table(name = "tb_user")
+public class User implements Serializable {
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Long id;
+  (........)
+
+  @OneToMany(mappedBy = "client")
+  private List<Order> orders = new ArrayList<>();
+
+  (.......)
+}
+----------------------------------------------------------------
+@Entity
+@Table(name = "tb_order")
+public class Order implements Serializable {
+  (........)
+
+  @ManyToOne
+  @JoinColumn(name = "client_id")
+  private User client;
+
+  (.......)
+```
+`@Entity` = Sinaliza que a classe é uma entidade
+
+`@Table(name = "tb_user")` = Sinaliza o nome que será usado para a tabela dessa entidade
+
+`@GeneratedValue(strategy = GenerationType.IDENTITY)` = Sinaliza que a propriedade será autoincrementada no BD
+
+`@OneToMany(mappedBy = "client")` = Mapeia a relação `Um para Muitos` nesse atributo com outra classe/entidade e que o atributo do outro lado é o `client` 
+
+`@JoinColumn(name = "client_id")` = Mapeia qual a coluna que será usada para a ligação das tabelas
+
+```
+@RestController
+@RequestMapping(value = "/users")
+public class UserResource {}
+```
+`@RestController` = Sinaliza que a classe é um serviço
+
+`@RequestMapping(value = "/users")` = Sinaliza qual o caminho que será usado para acionar esse serviço.
+
+```
+@GetMapping
+public ResponseEntity<List<User>> findAll() {
+    List<User> list = service.findAll();
+    return ResponseEntity.ok().body(list);
+}
+```
+`@GetMapping` = Sinaliza que  ao acessar o caminho raiz com o verbo GET executará o metodo. Também pode receber um `(value = "")` para especificar o caminho.
+
+```
 ```

@@ -20,8 +20,8 @@ public class Main {
 
             int rows1 = st.executeUpdate("UPDATE seller SET BaseSalary = 2090 WHERE DepartmentId = 2");
 
-            int x = 1;
-            //if (x < 2) throw new SQLException("FakeError");
+//            int x = 1;
+//            if (x < 2) throw new SQLException("FakeError");
 
             int rows2 = st.executeUpdate("UPDATE seller SET BaseSalary = 5000 WHERE DepartmentId = 3");
 

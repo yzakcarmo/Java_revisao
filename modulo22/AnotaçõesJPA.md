@@ -122,4 +122,14 @@ public ResponseEntity<List<User>> findAll() {
     return ResponseEntity.ok().body(list);
 }
 ```
-`@GetMapping` = Sinaliza que  ao acessar o caminho raiz com o verbo GET executará o metodo. Também pode receber um `(value = "")` para especificar o caminho.
+`@GetMapping` = Sinaliza que ao acessar o caminho raiz com o verbo GET executará o metodo. Também pode receber um `(value = "")` para especificar o caminho.
+
+```
+@JoinTable(name = "tb_product_category",
+  joinColumns = @JoinColumn(name = "product_id"),
+  inverseJoinColumns = @JoinColumn(name = "category_id"))
+private Set<Product> products = new HashSet<>();
+```
+`@Transient` = Sinaliza para o JPA não interpretar o atributo(Geralmente usado pra não atrapalhar o build da aplicação)
+
+`@JoinTable()` = Sinaliza o nome da tabela de junção e quais as chaves que serão usadas na ligação `Muitos para Muitos`

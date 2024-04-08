@@ -106,6 +106,9 @@ public class Order implements Serializable {
 
 `@JoinColumn(name = "client_id")` = Mapeia qual a coluna que será usada para a ligação das tabelas
 
+
+`@OneToOne(mappedBy = "order", cascade = CascadeType.ALL)` = Mapeia a relação `Um para Um` e com isso define que o Id dos elementos será o mesmo
+
 ```
 @RestController
 @RequestMapping(value = "/users")

@@ -136,3 +136,6 @@ private Set<Product> products = new HashSet<>();
 `@Transient` = Sinaliza para o JPA não interpretar o atributo(Geralmente usado pra não atrapalhar o build da aplicação)
 
 `@JoinTable()` = Sinaliza o nome da tabela de junção e quais as chaves que serão usadas na ligação `Muitos para Muitos`
+
+# get em Metodos que tem retorno
+Para que o JPA trago o retorno do metodo no JSON, é necessario adicionar o get no nome, exemplo: `getTotal()`
